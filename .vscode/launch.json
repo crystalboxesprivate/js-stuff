@@ -45,6 +45,18 @@
         "<node_internals>/**"
       ],
       "program": "${workspaceFolder}\\full-stackapp\\server\\src\\index.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Server side rendering",
+      "cwd": "${workspaceFolder}\\server-side-rendering",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}\\server-side-rendering\\src\\server.js",
+      "runtimeExecutable": "${workspaceFolder}/server-side-rendering/node_modules/.bin/babel-node",
+      "runtimeArgs": ["--nolazy"]
     }
   ]
 }
