@@ -24,8 +24,11 @@ function updateNoteMutation(_id, content) {
       console.log('Response received from server')
     },
     updater: store => {
+      console.log(store)
       const newUpdatedNote = store.getRootField('updateNote')
+      console.log(newUpdatedNote)
       const root = store.getRoot()
+      console.log('root:', root)
       const notes = root.getLinkedRecords('notes')
       const newNotes = notes.filter(v => v.getValue('_id') !== _id)
 

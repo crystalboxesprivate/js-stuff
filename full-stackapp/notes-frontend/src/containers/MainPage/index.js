@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import createNoteMutation from './mutations/createNote'
 import deleteNoteMutation from './mutations/deleteNote'
-import updateNodeMutation from './mutations/updateNote'
+import updateNoteMutation from './mutations/updateNote'
 
 const Mainpage = ({ notes }) => {
   const [newNote, setNewNote] = useState('')
@@ -25,7 +25,8 @@ const Mainpage = ({ notes }) => {
               <div style={{ display: 'flex' }}>
                 <button onClick={() => {
                   if (isBeingUpdated) {
-                    updateNodeMutation(v._id, noteContentBeingUpdated)
+                    console.log('v._id', v._id, 'node cont', noteContentBeingUpdated)
+                    updateNoteMutation(v._id, noteContentBeingUpdated)
                     setNoteIdBeingUpdated('')
                     setNoteContentBeingUpdated('')
                   } else {

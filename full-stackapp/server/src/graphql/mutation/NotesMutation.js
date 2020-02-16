@@ -30,7 +30,7 @@ const UpdateNoteMutation = {
     _id: { type: GraphQLID },
     content: { type: GraphQLString }
   },
-  resolve: async (_, { _id }) => {
+  resolve: async (_, { _id, content }) => {
     const noteService = new NoteService()
     const updatedNote = await noteService.updateNote(_id, { content })
     return updatedNote

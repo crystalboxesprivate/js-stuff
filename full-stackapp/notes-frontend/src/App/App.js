@@ -27,6 +27,7 @@ export default class App extends React.Component {
           if (!props) {
             return <div>loading...</div>
           }
+          console.log(props)
           return <MainPage {...props} />
         }}
       />
