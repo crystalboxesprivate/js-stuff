@@ -23,6 +23,7 @@ app.use(express.static('public'))
 // get request for the front page
 app.get('/', function (req, res) {
   // render - template name
+  // res.send('Hello World!')
   res.render('index', { weather: null, error: null })
 })
 // post request from the form
